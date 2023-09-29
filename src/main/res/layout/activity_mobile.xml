@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:weightSum="100"
+    android:background="@color/white"
+    android:layout_margin="20dp"
+    android:layout_height="match_parent"
+    tools:context=".MobileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_weight="20"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="32dp"
+            android:layout_margin="10dp"
+            android:layout_height="32dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/red">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="32dp"
+            android:layout_margin="10dp"
+            android:layout_height="32dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/gray">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="2"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/gray">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/call"
+        app:tint="@color/orange"
+        android:layout_weight="30"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Enter Mobile Number"
+        android:textColor="@color/red"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCodeHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccp_showNameCode="false"
+            app:ccp_showFlag="false"/>
+
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit"
+            android:elevation="5dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_weight="5"
+        android:fontFamily="monospace"
+        android:foregroundTint="@color/white"
+        android:text="Confirm"
+        android:textColor="@color/white" />
+
+</LinearLayout>
